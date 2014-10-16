@@ -46,7 +46,10 @@ INSTALLED_APPS = [
 # 添加已安装的应用
 lines=read_file(os.path.join(CONFIG_PATH,'installed_apps'))
 for line in lines:
-    line=line[:line.find('#')].strip()
+    a=line.find('#')
+    if a>=0:
+        line=line[:a]
+    line=line.strip()
     if line:
         INSTALLED_APPS.append(line)
 
