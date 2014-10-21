@@ -1,0 +1,21 @@
+{% extends "base_workmgr.html" %}
+{% block content %}
+<div class='card'>
+    <div class='header'>
+        <p>{{ object.name }}</p>
+        <p class='tips'>{{ object.compony }} {{object.department}} </p>
+    </div>
+    <div class='content'>
+        <p>手机：{{object.mobile}} <p/>
+        <p>电话：{{object.tel}} <p/>
+        <p>电子邮件：{{object.email}} <p/>
+        <p>备注：{{object.memo}} <p/>
+        <a href={% url 'txl:create' %}>新增</a>
+        <a href={% url 'txl:update' object.pk %}>修改</a>
+        <a href={% url 'txl:delete' object.pk %}>删除</a>
+        <a href={% url 'txl:home' %}>返回</a>
+        <a href='mailto:{{object.email}}'>发送邮件</a>
+    </div>
+</div>
+{% endblock %}
+

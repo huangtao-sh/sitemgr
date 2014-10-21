@@ -1,0 +1,16 @@
+{% extends "base_workmgr.html" %}
+
+{% block content %}
+<form action="" method="post">
+{% csrf_token %}
+<div class='card'>
+    <div class='header'>
+        <p>删除确认</p>
+    </div>
+    <div class='content'>
+        <p>{{ object }}将会被删除，请确认？</p>
+        <input class='button' type="submit" value="确认" />
+    </div>
+</div>
+</form>
+{% endblock %}

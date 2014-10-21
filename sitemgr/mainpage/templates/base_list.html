@@ -1,0 +1,19 @@
+{% extends "base_workmgr.html" %}
+{% block content %}
+{% for object in object_list %}
+<div class ='card'>
+    <div class='header'>
+    {% block cardtitle %}{% endblock %}
+    </div>
+    <div class='content'>
+        {% block cardcontent %}
+        {% endblock %}
+    </div>
+</div>
+{% empty %}
+<div class='card'>
+    <div class='header'>没有查询到相关数据！</div>
+</div>
+{% endfor %}
+{% include 'page.html' %}
+{% endblock %}

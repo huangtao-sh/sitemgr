@@ -1,0 +1,199 @@
+﻿@charset "UTF-8"
+/*基本信息*/
+html {
+    background:#E0FFFF;
+}
+body {
+    font:13pt 微软雅黑;
+    margin:0px;
+    text-align:center;
+    background:#E0FFFF;
+}
+
+/*页面层容器*/
+#container {
+    width:800px;
+    margin:10px auto}
+
+/*页面头部*/
+#header {
+    background:url(/static/img/logo.gif) no-repeat
+}
+#menu {
+    padding:20px 20px 0 0;
+    font-family:微软雅黑;
+}
+#menu ul {
+    float:right;
+    list-style:none;
+    margin:0px;
+}
+#menu ul li {
+    float:left;
+    display:block;
+    line-height:30px;
+    margin:0 10px
+}
+#menu ul li a:link,#menu ul li a:visited {
+    font-weight:bold;
+    color:#666
+}
+#menu ul li a:hover{}
+#menu ul li a{
+    font-family:幼圆;
+    font-size:14pt;
+}
+#menu a:link, #menu a:visited, #menu a:active{
+    text-decoration:none
+}
+
+.menuDiv {
+    width:1px;
+    height:28px;
+    background:#999
+}
+#banner {
+    background:url(/static/img/banner.jpg) 0 30px no-repeat;
+    width:730px;
+    margin:auto;height:240px;
+    border-bottom:5px solid #EFEFEF;
+    clear:both
+}
+
+/*页面主体*/
+#pagebody {
+    width:800px;
+    margin:0 auto;
+}
+
+/*页面底部*/
+#footer {
+    width:800px;
+    margin:0 auto;height:50px;
+    font-family:微软雅黑;
+    font-size:12pt}
+div.card {
+    width:100%;
+    margin:5px auto;
+    padding:2px 10px ;
+    text-align:left;
+    border-bottom:1px solid gray;
+}
+
+.card p{
+    margin:0px;
+}
+.card .cardtitle{
+    font-family:方正黑体_GBK;
+    font-size:14pt;
+    margin:0 auto;
+    width:100%;
+    border-bottom:2px solid gray;
+    text-align:left;
+}
+.card .cardcontent{
+    font-family:方正仿宋_GBK;
+    font-size:14pt;
+    width:100%;
+    margin:0 auto;
+    text-align:left;
+}
+.card a{
+    font-family:方正仿宋_GBK;
+    font-size:13pt;
+}
+.card .tips{
+    font-family:方正仿宋_GBK;
+    font-size:12pt;
+    color:gray;
+    text-align:left;
+}
+
+#copyright {
+    text-align:center;
+    font-family:'Microsoft YaHai';
+    font-size:12pt;
+}
+
+table.form {
+    width:100%;
+    border-collapse:collapse;}
+table.form caption {
+    font-family:'方正黑体_GBK';
+    font-size:16pt;
+}
+table.form th {
+    border-width:1px;
+    padding:8px;
+    border-style:solid;
+    border-color:gray;
+    text-align:left;
+}
+table.form td {
+    border-width:1px;
+    padding:8px;
+    border-style:solid;
+    border-color:gray;
+    text-align:left;
+}
+form .button{
+    font-family:'方正黑体_GBK';
+    font-size:14pt;
+}
+div.search{
+    width=100%;
+    margin:0 auto;
+}
+div.report{
+    width=100%;
+    margin:0 auto;
+}
+
+div.blog h1,div.blog h2,div.blog h3,div.blog h4,div.blog h5{
+    font-family:'方正黑体_GBK';
+    font-size:13pt;
+}
+div.blog h1{
+    font-size:14pt;
+}
+div.blog code{
+    font-size:12pt;
+    font-family:"YaHei Consolas Hybrid"
+}
+div.blog p{
+    font-family:'方正仿宋_GBK';
+    font-size:13pt;
+}
+
+table.report{
+    width:100%;
+    border-collapse:collapse;
+    border-width:1px;
+}
+table.report caption{
+    font-family:方正黑体_GBK;
+    font-size:15pt;
+    text-align:center
+}
+
+table.report th {
+    text-align:center;
+    padding:8px;
+    border-style:solid;
+    border-color:gray;
+    border-width:1px;
+}
+table.report th.left{
+    text-align:left;
+}
+table.report td {
+    padding:8px;
+    border-style:solid;
+    border-color:gray;
+    text-align:left;
+    border-width:1px;
+}
+table.report td.number{
+    text-align:right;
+}
+

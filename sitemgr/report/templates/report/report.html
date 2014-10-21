@@ -1,0 +1,27 @@
+{% extends "base_workmgr.html" %}
+
+{% block content %}
+{% if form %}
+<div class='card'>
+    <div>  
+        <form action ="" method="GET">
+            <table class='form'>
+                {{ form.as_table }}
+            </table>
+            <input class="button" type='submit' value='提交' />
+        </form>
+    </div>
+</div>
+{% endif %}
+
+{% if report %}
+
+<div class ='card'>
+    <div class='cardcontent'>
+        {{report.as_html|safe}} 
+    </div>
+</div>
+
+{% endif %}
+
+{% endblock %}

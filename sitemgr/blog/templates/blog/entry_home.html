@@ -1,0 +1,12 @@
+{% extends "search.html" %}
+{% block cardtitle %}
+    <p>{{object.title}}</p>
+    <p class='tips'>{{object.create_date|date:"Y年n月j日"}}创建</p>
+{% endblock %}
+{% block cardcontent %}
+        <a href={% url 'blog:create' %}>新建</a>
+        <a href={% url 'blog:update' object.pk %}>修改</a>
+        <a href={% url 'blog:delete' object.pk %}>删除</a>
+        <a href={% url 'blog:detail' object.pk %}>查阅</a>
+        <a href={% url 'blog:home' %}>返回</a>
+{% endblock %}

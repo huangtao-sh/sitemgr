@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from sitemgr.settings import INSTALLED_APPS
+from sitemgr.sitemgr.settings import INSTALLED_APPS
 
 pattern_list=[
     '',

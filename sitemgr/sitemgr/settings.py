@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 import sys
 from stdlib import read_file
+
 Version='0.0.1'
 if sys.platform.startswith('linux'):
     WORK_PATH='/var/www/mysite'
@@ -19,7 +20,8 @@ if sys.platform.startswith('linux'):
 else:
     WORK_PATH='c:/mysite'
     CONFIG_PATH='c:/mysite'
-
+BASEDIR=os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASEDIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -27,28 +29,29 @@ else:
 SECRET_KEY = '-57v#d0i4a8box--1-jabm_o1yh!y9=1v=4r@#cee#@+%vbxv-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True 
+DEBUG = False 
 
-TEMPLATE_DEBUG = True
-
-TEMPLATE_DIRS=(os.path.join(WORK_PATH,'templates'),)
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
 # Application definition
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-)
+]
 
 # 添加已安装的应用
 lines=read_file(os.path.join(CONFIG_PATH,'installed_apps'))
 for line in lines:
-    line=line[:line.find('#')].strip()
+    a=line.find('#')
+    if a>=0:
+        line=line[:a]
+    line=line.strip()
     if line:
         INSTALLED_APPS.append(line)
 
@@ -62,7 +65,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'sitemgr.dev_urls'
+ROOT_URLCONF = 'sitemgr.sitemgr.urls'
 
 WSGI_APPLICATION = 'sitemgr.wsgi.application'
 

@@ -1,0 +1,29 @@
+{% extends "base_workmgr.html" %}
+
+{% block content %}
+<div class='card'>
+    <div class='cardtitle'>
+        <p>通讯录</p>
+    </div>
+    <div class='cardcontent'>
+        <p>共有{{object_list.count}}条记录</p>
+        <a href={% url 'txl:create' %}>新建</a>
+        <a href={% url 'report:upload' %}>批量上传</a>
+    </div>
+</div>
+<div class='card'>
+    <div class='cardtitle'>
+        <p>搜索</p>
+    </div>
+    <div class='cardcontent'>
+        {% if form %}
+        <form action ={% url 'txl:search'%} method="GET">
+            <table class='form'>
+                {{ form.as_table }}
+            </table>
+            <input class="button" type='submit' value='搜索' />
+        </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

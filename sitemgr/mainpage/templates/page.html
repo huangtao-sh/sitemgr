@@ -1,0 +1,19 @@
+{% if is_paginated %}
+<p>
+            {%if page_obj.has_previous %}
+            {% if search %}
+            <a href="?{{search}}&page={{ page_obj.previous_page_number }}">上一页</a>
+            {% else %}
+            <a href="?page={{ page_obj.previous_page_number }}">上一页</a>
+            {% endif %}
+            {% endif %}
+            {{page_obj.number}}/{{paginator.num_pages}}
+            {%if page_obj.has_next %}
+            {% if search %}
+            <a href="?{{search}}&page={{ page_obj.next_page_number }}">下一页</a>
+            {% else %}
+            <a href="?page={{ page_obj.next_page_number }}">下一页</a>
+            {% endif %}
+            {% endif %}
+</p>
+{% endif %}

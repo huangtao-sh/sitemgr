@@ -1,0 +1,38 @@
+{% extends "base_workmgr.html" %}
+
+{% block content %}
+
+{% if object_list %}
+{% for object in object_list %}
+<div class ='card'>
+    <div class='cardtitle'>
+    {% block cardtitle %}{% endblock %}
+    </div>
+    <div class='cardcontent'>
+        {% block cardcontent %}
+        {% endblock %}
+        {% include 'page.html' %}
+    </div>
+</div>
+{% empty %}
+<div class='card'>
+    <div class='cardtitle'>没有查询到相关数据！</div>
+</div>
+{% endfor %}
+{% endif %}
+{% if form %}
+<div class='card'>
+    <div class='cardtitle'>
+        <p>搜索条件</p>
+    </div>
+    <div>  
+        <form action ="" method="GET">
+            <table class='form'>
+                {{ form.as_table }}
+            </table>
+            <input class="button" type='submit' value='搜索' />
+        </form>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

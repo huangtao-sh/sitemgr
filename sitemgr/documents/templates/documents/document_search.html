@@ -1,0 +1,11 @@
+{% extends "search.html" %}
+{% block cardtitle %}
+    <p>{{ object.name }}<p/>
+    <p class='tips'>{{ object.office_no }}</p>
+{% endblock %}
+{% block cardcontent %}
+    <a href={% url 'documents:update' object.pk %}>修改</a>
+    <a href={% url 'documents:delete' object.pk %}>删除</a>
+    <a href={% url 'documents:detail' object.pk %}>详情</a>
+    <a href='{{object.file_name}}'>查阅</a> 
+{% endblock %}

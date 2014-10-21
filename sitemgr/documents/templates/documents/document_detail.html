@@ -1,0 +1,23 @@
+{% extends "base_workmgr.html" %}
+{% block content %}
+<div class='card'>
+    <div class='header'>
+        <p>{{ object.name }}</p>
+        <p class='tips'>{{ object.office_no }}</pn>
+    </div>
+    <div class='content'>
+        <p>标签：
+        {% for tag in object.tags.all %}
+            <span>{{tag}}</span>
+        {% endfor %}
+        <p/>
+        <p>生效日期：{{ object.efficetive_date|date:"Y-m-d" }}</p>
+        <p>失效日期：{{ object.expire_date|date:"Y-m-d"  }}</p>
+
+        <a href={% url 'documents:update' object.pk %}>修改</a>
+        <a href={% url 'documents:delete' object.pk %}>删除</a>
+        <a href={% url 'documents:home' %}>返回</a>
+    </div>
+</div>
+{% endblock %}
+

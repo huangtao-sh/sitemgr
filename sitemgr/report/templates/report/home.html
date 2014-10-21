@@ -1,0 +1,42 @@
+{% extends "base_workmgr.html" %}
+
+{% block content %}
+{% if home %}
+
+<div class ='card'>
+    <div class='cardtitle'>
+        <p>报表管理</p>
+    </div>
+    <div class='cardcontent'>
+        <a href={% url 'report:upload' %}>数据上传</a>
+        <a href={% url 'report:monthrpt' %}>月报查询</a>
+        <a href={% url 'report:quaterrpt' %}>季报查询</a>
+    </div>
+</div>
+{% for type,cls in home.month_rpt %}
+<div class ='card'>
+    <div class='cardtitle'>
+        <p>{{cls}}</p>
+    </div>
+    <div class='cardcontent'>
+        {% for m in home.month_list %}
+        <a href="{% url 'report:monthrpt' %}?report_type={{type}}&qici={{m.0}}">{{m.1}}</a>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+{% for type,cls in home.quater_rpt %}
+<div class ='card'>
+    <div class='cardtitle'>
+        <p>{{cls}}</p>
+    </div>
+    <div class='cardcontent'>
+        {% for m in home.quater_list %}
+        <a href="{% url 'report:quaterrpt' %}?report_type={{type}}&qici={{m.0}}">{{m.1}}</a>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+
+{% endblock %}

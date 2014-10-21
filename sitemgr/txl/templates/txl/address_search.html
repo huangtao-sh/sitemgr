@@ -1,0 +1,18 @@
+{% extends "search.html" %}
+{% block cardtitle %}
+    {{ object.name }}<br/>
+    <span class='tips'>{{ object.compony }}</span>
+    <span class='tips'>{{ object.department }}</span>
+{% endblock %}
+{% block cardcontent %}
+    <div class='content'>
+        <p>手机：{{object.mobile}} <p/>
+        <p>电话：{{object.tel}} <p/>
+        <p>电子邮件：{{object.email}} <p/>
+        <p>备注：{{object.memo}} <p/>
+        <a href={% url 'txl:update' object.pk %}>修改</a>
+        <a href={% url 'txl:delete' object.pk %}>删除</a>
+        <a href={% url 'txl:home' %}>返回</a>
+        <a href='mailto:{{object.email}}'>发送邮件</a>
+    </div>
+{% endblock %}

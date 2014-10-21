@@ -1,0 +1,242 @@
+div.blog p,div.blog blockquote,div.blog ul,div.blog ol,div.blog dl,div.blog table,div.blog pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+div.blog h1,div.blog h2,div.blog h3,div.blog h4,div.blog h5,div.blog h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+div.blog h1 tt,div.blog h1 code,div.blog h2 tt,div.blog h2 code,div.blog h3 tt,div.blog h3 code,div.blog h4 tt,div.blog h4 code,div.blog h5 tt,div.blog h5 code,div.blog h6 tt,div.blog h6 code {
+  font-size: inherit;
+}
+
+div.blog h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+div.blog h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+div.blog h3 {
+  font-size: 18px;
+}
+
+div.blog h4 {
+  font-size: 16px;
+}
+
+div.blog h5 {
+  font-size: 14px;
+}
+
+div.blog h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+
+
+div.blog a:first-child h1,div.blog a:first-child h2,div.blog a:first-child h3,div.blog a:first-child h4,div.blog a:first-child h5,div.blog a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+div.blog h1+p,div.blog  h2+p,div.blog h3+p,div.blog h4+p,div.blog h5+p,div.blog h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+div.blog a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+div.blog a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+div.blog ul,div.blog ol {
+  padding-left: 30px;
+}
+
+div.blog ul li > :first-child, 
+div.blog ol li > :first-child, 
+div.blog ul li ul:first-of-type, 
+div.blog ol li ol:first-of-type, 
+div.blog ul li ol:first-of-type, 
+div.blog ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+div.blog ul ul,div.blog  ul ol,div.blog ol ol,div.blog ol ul {
+  margin-bottom: 0;
+}
+
+div.blog dl {
+  padding: 0;
+}
+
+div.blog dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+div.blog dl dt:first-child {
+  padding: 0;
+}
+
+div.blog dl dt>:first-child {
+  margin-top: 0px;
+}
+
+div.blog dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+div.blog dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+div.blog dl dd>:first-child {
+  margin-top: 0px;
+}
+
+div.blog dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+div.blog pre,div.blog  code,div.blog tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+div.blog code,div.blog tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+div.blog pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+div.blog pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+div.blog pre code,div.blog pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+div.blog kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+div.blog blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+div.blog blockquote>:first-child {
+  margin-top: 0px;
+}
+
+div.blog blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+div.blog hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+div.blog table th {
+  font-weight: bold;
+}
+
+div.blog table th,div.blog table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+div.blog table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+div.blog table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+div.blog img {
+  max-width: 100%
+}

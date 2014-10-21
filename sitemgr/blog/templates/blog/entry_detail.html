@@ -1,0 +1,24 @@
+{% extends "base_workmgr.html" %}
+{% block head %}
+<link rel='stylesheet' type='text/css' href='/static/css/blog.css'/>
+{% endblock %}
+{% block content %}
+<div class='card'>
+    <div class='header'>
+        <h1>{{ object.title }}</h1>
+        <p class='tips'>{{object.create_date|date:"Y年n月j日"}}创建
+        {% if object.update_date %}
+        {{object.update_date|date:"Y年m月j日"}}修订 
+        {% endif %}
+        </p>
+    </div>
+    <div class='content'>
+        {{ object.as_html|safe }}
+        <a href={% url 'blog:create' %}>新增</a>
+        <a href={% url 'blog:update' object.pk %}>修改</a>
+        <a href={% url 'blog:delete' object.pk %}>删除</a>
+        <a href={% url 'blog:home' %}>返回</a>
+    </div>
+</div>
+{% endblock %}
+
