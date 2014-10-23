@@ -9,6 +9,7 @@ pattern_list=[
     # url(r'^blog/', include('blog.urls')),
     #url(r'^$', "mainpage.views.index"),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^auth/', include("django.contrib.auth.urls")),
     url(r'^$', include("mainpage.urls")),
               ]
 

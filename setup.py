@@ -52,7 +52,6 @@ setup(
     scripts=['script/prdsite.py'],
     data_files=[
         (WORK_PATH,['script/wsgi.py']),
-        (CONFIG_PATH,['conf/installed_apps']),
         (os.path.join(WORK_PATH,'static'),glob('static/*.*')),
         (os.path.join(WORK_PATH,'media'),glob('media/*.*')),
         ('/etc/apache2/sites-available/',['conf/mysite']),

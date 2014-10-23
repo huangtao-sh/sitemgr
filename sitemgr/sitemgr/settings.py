@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import sys
-from stdlib import read_file
 
 Version='0.0.1'
 if sys.platform.startswith('linux'):
@@ -43,17 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mainpage',
+    'report',
+    'txl',
+    'documents',
+    'blog',
 ]
 
-# 添加已安装的应用
-lines=read_file(os.path.join(CONFIG_PATH,'installed_apps'))
-for line in lines:
-    a=line.find('#')
-    if a>=0:
-        line=line[:a]
-    line=line.strip()
-    if line:
-        INSTALLED_APPS.append(line)
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
